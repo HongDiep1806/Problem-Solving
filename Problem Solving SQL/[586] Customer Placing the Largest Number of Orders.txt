@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+SELECT O.customer_number as customer_number
+FROM Orders AS O
+GROUP BY customer_number
+ORDER BY(order_number) desc
+LIMIT 1; 

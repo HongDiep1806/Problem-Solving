@@ -1,0 +1,6 @@
+# Write your MySQL query statement below
+select customer_id from
+(select customer_id, COUNT(distinct product_key) as distinct_products from Customer
+group by customer_id) this
+where distinct_products = (select COUNT(product_key) from Product)
+ 
